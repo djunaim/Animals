@@ -4,10 +4,10 @@ using System.Text;
 
 namespace Animals.Reptiles 
 {
-    // implicitly implied as internal (only accessible within this project) if not explicitly set. If want to set it accessible to all projects anywhere, use 'public' access modifier. Classes have access modifiers.
+    // implicitly implied as internal (only accessible within this project) if not explicitly set. If want to set class accessible to all projects anywhere, use 'public' access modifier. Classes have access modifiers. Should separate classes into own files. Classes have default constructors
     class Alligator
     {
-        // storing data: property and field. Fields are generally private, never really see public. Fields are data stored just for me. If private not explicitly said within class, it will be implicitly private inside class. The underscore in the beginning is idiomatic
+        // storing data: property and field. Fields are generally private, never really see public. Fields are data stored just for me. If private not explicitly said within class, it will be implicitly private inside class. The underscore in the beginning is idiomatic. Private fields can be changed if it's within class
         private bool _isAquatic;
         private int _stepGoal;
         private int _stepCount;
@@ -15,14 +15,14 @@ namespace Animals.Reptiles
         // Property structure: access modifier, type of property, property name, curly braces, with auto properties get (return data) and set (set value) inside it. Properties for exposing information so can be able to modify
         public bool IsAquatic { get; set; }
 
-        // constructors structure: accessbility modifier and name. Name of constructor matches class name. Constructors can have parameters. Constuctors if part of class is implicitly private
+        // constructors structure: accessbility modifier and name. Name of constructor matches class name. Constructors can have parameters. Constuctors if part of class is implicitly private. Only write constructors when want to do something when class gets instantiated
         public Alligator(int stepGoal)
         {
             IsAquatic = true;
             _stepGoal = stepGoal;
         }
 
-        // Method signature structured in the following: Accessiblity modifier, method's return type, name of method, arguments in function (need to declare what type of parameter it is). If want method to return nothing, need void. "Internal" accessiblity modifier can only be called inside this project, cannot be accessed in other projects
+        // Method signature structured in the following: Accessiblity modifier, method's return type, name of method, arguments in function (need to declare what type of parameter it is). If want method to return nothing, need void. "Internal" accessiblity modifier can only be called inside this project, cannot be accessed in other projects. When adding methods to class, adding behaviors (actions, activities)
         public void Grunt ()
         {
             if (IsAquatic)
